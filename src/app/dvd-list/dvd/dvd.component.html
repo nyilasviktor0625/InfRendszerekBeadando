@@ -1,0 +1,21 @@
+<div class="row">
+<div class="col-md-2"></div>
+    <!--<div class="col-md-3">
+        <img [src]="dvd.imgUrl" alt="dvd image">
+    </div>-->
+    <div class="col-md-9">
+        <h5>
+            {{ dvd.title }}
+<!--<span class="badge badge-success">{{ dvd.price }} $</span>-->
+            <button class="btn btn-sm btn-primary" (click)="navigateToDVDForm(dvd.id)"style="margin:5px">Módosítás</button>
+			 <button class="btn btn-sm btn-danger" (click)="deleteDVD(dvd.id)">Törlés</button>
+
+        </h5>
+        <p>
+            <span class="badge badge-secondary" *ngFor="let category of dvd.categories">{{ category.title }}</span>
+        </p>
+        <p *ngIf="dvd.user">Uploader: {{ dvd.user.firstName }} {{ dvd.user.lastName }}</p>
+        <p>{{ dvd.description }}</p>
+    </div>
+	<div class="col-md-2"></div>
+</div>

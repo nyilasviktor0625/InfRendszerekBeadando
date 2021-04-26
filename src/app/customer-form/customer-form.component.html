@@ -1,0 +1,36 @@
+<div class="row">
+<div class="col-md-3"></div>
+    <div class="col-md-6">
+        <div class="alert alert-danger" role="alert" *ngIf="errorMessage">
+            {{ errorMessage }}
+        </div>
+        <div class="alert alert-success" role="alert" *ngIf="successMessage">
+            {{ successMessage }}
+        </div>
+        <form [formGroup]="customerForm">
+            <label for="firstName">Vezetéknév</label>
+            <input type="text" class="form-control" id="firstName" formControlName="firstName">
+            <label for="lastName">Keresztnév</label>
+            <input type="text" class="form-control" id="lastName" formControlName="lastName">
+            <label for="age">Kor</label>
+            <input type="number" class="form-control" id="age" formControlName="age">
+			<label for="ID_num">Személyigazolvány szám</label>
+            <input type="number" class="form-control" id="ID_num" formControlName="ID_num">
+			<label for="zip_number">Irányítószám</label>
+            <input type="number" class="form-control" id="zip_number" formControlName="zip_number">
+			
+            <label for="city">Város</label>
+            <input type="text" class="form-control" id="city" formControlName="city">
+			 <label for="street">Utca</label>
+            <input type="text" class="form-control" id="street" formControlName="street">
+			<label for="house_num">Házszám</label>
+            <input type="number" class="form-control" id="house_num" formControlName="house_num">
+			
+			
+            <button class="btn btn-primary mt-2" (click)="createCustomer()">
+                Kölcsönző Mentése
+            </button>
+        </form>
+    </div>
+	<div class="col-md-3"></div>
+</div>

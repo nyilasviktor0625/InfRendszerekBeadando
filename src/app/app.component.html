@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Videótéka</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/">Terméklista</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/dvd-form">Új termék</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/customer-form">Új felhasználó</a>
+            </li>
+			<li class="nav-item">
+                <a class="nav-link" routerLink="/customer-list/">Felhasználók</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/category-form">Kategóriák</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="col-md-12" id="bg-img" style="background-image:url ('../assets/images/bg.jpg')">
+<img src ="/assets/images/bg.jpg" style="height:600px; width:100%;">
+<h1>VideóTéka Rendszer Felülete!<br> Üdv az oldalon.</h1>
+</div>
+<div class="container-fluid">
+    <router-outlet></router-outlet>
+</div>

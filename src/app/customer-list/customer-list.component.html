@@ -1,0 +1,27 @@
+<div class="row mt-2">
+   
+   
+</div>
+<div class="row">
+<div class="col-md-1"></div>
+    <div class="col-md-10">
+	
+		
+        <h5>Felhasználók listázása</h5>
+        <div class="row">
+            <li *ngFor="let customer of customers">
+			<h5>
+             <b> Felhasználó neve:</b>  {{ customer.firstName }} {{customer.lastName}}</h5>
+				<p><b>Személyigazolvány szám: </b>{{customer.ID_num}}</p>
+				<p><b>Város: </b>{{customer.city}}</p>
+				<p><b>Utca: </b>{{customer.city}}</p>
+				<p><b>Hászám: </b>{{customer.house_num}}</p>
+				<p><b>Kor: </b>{{customer.age}}
+				<br>
+                <button class="btn btn-sm btn-danger" (click)="deleteCustomer(customer.id)">Törlés</button></p>
+        </div>
+    </div>
+	<div class="col-md-1"></div>
+    
+</div>
+

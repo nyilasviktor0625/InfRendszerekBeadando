@@ -1,0 +1,33 @@
+<div class="row">
+	<div class="col-md-3"></div>
+    <div class="col-md-6">
+        <form [formGroup]="dvdForm">
+            <label for="title">Videó Neve</label>
+            <input type="text" class="form-control" id="title" formControlName="title">
+            <label for="description">Videó leírása</label>
+            <input type="text" class="form-control" id="description" formControlName="description">
+            <label for="date">Beszerzés Dátuma</label>
+            <input type="text" class="form-control" id="date" formControlName="date">
+            
+            <label for="imgUrl">Borítókép URL</label>
+            <input type="text" class="form-control" id="imgUrl" formControlName="imgUrl">
+            <div class="text-danger" *ngIf="imgUrl.invalid  && (imgUrl.dirty || imgUrl.touched)">
+                <small *ngIf="imgUrl.errors.pattern">Image URL must be a valid URL.</small>
+            </div>
+           
+            <label for="user">Kikölcsönző ember</label>
+            <select [compareWith]="compareCustomers" class="form-control" id="user" formControlName="user">
+                <option *ngFor="let customer of customers" [ngValue]="customer">{{ customer.firstName }} {{ customer.lastName }}</option>
+            </select>
+            <label for="categories">Kategória</label>
+            <select [compareWith]="compareCategories" class="form-control" id="categories" formControlName="categories"
+                multiple>
+                <option *ngFor="let category of categories" [ngValue]="category">{{ category.title }}</option>
+            </select>
+            <button class="btn btn-primary mt-2" (click)="addDVD()">
+               Kölcsönzés mentése
+            </button>
+        </form>
+    </div>
+	<div class="col-md-3"></div>	
+</div>

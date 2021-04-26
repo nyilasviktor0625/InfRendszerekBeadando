@@ -1,0 +1,15 @@
+<div class="row">
+  
+    <div class="col-md-9">
+        <h5>
+            {{ customer.id }}
+<!--<span class="badge badge-success">{{ customer.price }} $</span>-->
+            <button class="btn btn-sm btn-primary" (click)="navigateToCustomerForm(customer.id)">Edit</button>
+			 <button class="btn btn-sm btn-danger" (click)="deleteCustomer(customer.id)">Delete</button>
+
+        </h5>
+    
+        <p *ngIf="customer">Uploader: {{ customer.firstName }} {{ customer.lastName }}</p>
+        <p>{{ customer.age }}</p>
+    </div>
+</div>
