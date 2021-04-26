@@ -1,6 +1,3 @@
-# Gyakorlati anyag
-Az gyakorlatokon elkészült webshop alkalmazás 1:1 másolata.
-
 ## Telepítés
 `npm install`
 
